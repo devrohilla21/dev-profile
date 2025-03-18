@@ -9,20 +9,27 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #f8f9fa, #e3f2fd); /* Light pastel gradient */
+    background: linear-gradient(to right, #dfe9f3, #f8f9fa); /* Soft pastel gradient */
     color: #333;
 }
 
-/* Sticky header with smooth hiding on scroll */
+/* Fixed Header with smooth hiding on scroll */
 header {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(250, 250, 250, 0.9);
     padding: 15px;
     position: fixed;
     top: 0;
     width: 100%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: top 0.3s ease-in-out;
+    z-index: 1000;
 }
+
+/* Add padding to fix overlap issue */
+.content-wrapper {
+    padding-top: 80px;
+}
+
 h1 {
     margin: 0;
     font-size: 24px;
@@ -45,9 +52,9 @@ nav ul li a:hover {
     color: #007bff;
 }
 
-/* Sections with reduced spacing */
+/* Sections with balanced spacing */
 section {
-    padding: 60px 20px;
+    padding: 50px 20px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -61,16 +68,16 @@ section {
     gap: 15px;
 }
 .project-card {
-    background: #ffffff;
+    background: #e3f2fd; /* Soft blue shade */
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3); /* Soft blue glow */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
-    background: #e3f2fd; /* Light blue hover */
+    background: #cfe7fa; /* Lighter blue on hover */
 }
 
 /* Contact Links */
@@ -85,7 +92,7 @@ a:hover {
 
 /* Footer */
 footer {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(250, 250, 250, 0.9);
     padding: 15px;
     width: 100%;
     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
