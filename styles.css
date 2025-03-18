@@ -1,104 +1,54 @@
-body {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    transition: background 0.3s ease;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Dev's Portfolio</h1>
+        <p>AI/ML Enthusiast | Python Developer</p>
+    </header>
 
-/* Header */
-header {
-    background: #222;
-    color: white;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-h1 {
-    margin: 0;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-nav ul li a:hover {
-    color: #ff9800;
-}
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-/* Sections */
-section {
-    padding: 50px 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Dev, a passionate AI/ML student working on various projects. I love coding and exploring new technologies.</p>
+    </section>
 
-/* Projects Section */
-.project-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-.project-card {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-.project-card:hover {
-    transform: scale(1.05);
-    background-color: #ff9800;
-    color: white;
-}
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Quiz Game in Python</h3>
+            <p>A fun quiz game built using Python.</p>
+        </div>
+        <div class="project">
+            <h3>AI-Based Chatbot</h3>
+            <p>An interactive chatbot using AI techniques.</p>
+        </div>
+        <div class="project">
+            <h3>Machine Learning Model</h3>
+            <p>A model that predicts outcomes based on data.</p>
+        </div>
+    </section>
 
-/* Contact Links */
-a {
-    color: #ff9800;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-a:hover {
-    color: #222;
-}
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:codewithdev21aug@gmail.com">codewithdev21aug@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/devrohilla21" target="_blank">devrohilla21</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/dev21.py" target="_blank">dev21.py</a></p>
+    </section>
 
-/* Footer */
-footer {
-    background: #222;
-    color: white;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+    <footer>
+        <p>© 2025 Dev Rohilla. All rights reserved.</p>
+    </footer>
+</body>
+</html>
