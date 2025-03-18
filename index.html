@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <header id="header">
+    <!-- Header -->
+    <header>
         <h1>Dev's Portfolio</h1>
-        <p>AIML Enthusiast | Python Developer</p>
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
@@ -22,13 +21,21 @@
     </header>
 
     <!-- About Me Section -->
-    <section id="about" class="fade-in">
+    <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Dev, an AI & ML enthusiast passionate about programming and problem-solving.</p>
+        <p>Hello! I'm Dev, an AIML enthusiast and Python developer.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-box">Quiz Game in Python</div>
+        <div class="project-box">AI-Based Chatbot</div>
+        <div class="project-box">Machine Learning Prediction Model</div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="fade-in">
+    <section id="skills">
         <h2>Skills</h2>
         <ul>
             <li>Python</li>
@@ -38,49 +45,33 @@
         </ul>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="fade-in">
-        <h2>Projects</h2>
-        <div class="project-box">Quiz Game in Python</div>
-        <div class="project-box">AI-based Chatbot</div>
-        <div class="project-box">Machine Learning Prediction Model</div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="fade-in">
+    <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
+        <div class="contact-box">
+            <h3>Get in Touch</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="purpose">Purpose of Contact:</label>
+                <textarea id="purpose" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
 
-            <label for="purpose">Purpose of Contact:</label>
-            <textarea id="purpose" rows="4" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="social-links">
+            <h3>Connect with Me</h3>
+            <p>📧 Email: dev@example.com</p>
+            <p>📸 Instagram: <a href="https://instagram.com/dev21.py" target="_blank">@dev21.py</a></p>
+            <p>💻 GitHub: <a href="https://github.com/devrohilla21" target="_blank">@devrohilla21</a></p>
+        </div>
     </section>
 
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                $(".fade-in").each(function() {
-                    let position = $(this).offset().top;
-                    let winTop = $(window).scrollTop();
-                    if (position < winTop + $(window).height() - 100) {
-                        $(this).addClass("visible");
-                    }
-                });
-            });
-
-            $("#contact-form").submit(function(event) {
-                event.preventDefault();
-                alert("Message sent successfully!");
-            });
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
