@@ -3,88 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Rohilla | Portfolio</title>
+    <title>Dev's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1>Dev Rohilla</h1>
-            <p>AI/ML Enthusiast | Python Developer</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header id="header">
+        <h1>Dev's Portfolio</h1>
+        <p>AIML Enthusiast | Python Developer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section id="about" class="fade-in">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Hi, I'm <strong>Dev Rohilla</strong>, an AI/ML enthusiast and Python developer passionate about building smart solutions. My portfolio showcases real-world projects that demonstrate my skills.</p>
-            </div>
-        </section>
+    <!-- About Me Section -->
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <p>Hello! I'm Dev, an AI & ML enthusiast passionate about programming and problem-solving.</p>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="fade-in">
-            <div class="container">
-                <h2>Skills</h2>
-                <ul class="skills-list">
-                    <li>Python</li>
-                    <li>Machine Learning</li>
-                    <li>Deep Learning</li>
-                    <li>Database Management</li>
-                    <li>Data Analysis</li>
-                </ul>
-            </div>
-        </section>
+    <!-- Skills Section -->
+    <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>C++</li>
+            <li>OOPs</li>
+            <li>DSA</li>
+        </ul>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="fade-in">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Quiz Game in Python</h3>
-                        <p>A simple interactive Python-based quiz game with a scoring system.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>AI-Based Chatbot</h3>
-                        <p>Built an AI chatbot that answers queries using NLP and ML algorithms.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>ML Prediction Model</h3>
-                        <p>Developed a predictive model that analyzes trends using ML techniques.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <div class="project-box">Quiz Game in Python</div>
+        <div class="project-box">AI-based Chatbot</div>
+        <div class="project-box">Machine Learning Prediction Model</div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="fade-in">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Email: <a href="mailto:codewithdev21aug@gmail.com">codewithdev21aug@gmail.com</a></p>
-                <p>GitHub: <a href="https://github.com/devrohilla21" target="_blank">devrohilla21</a></p>
-                <p>Instagram: <a href="https://www.instagram.com/dev21.py" target="_blank">dev21.py</a></p>
-            </div>
-        </section>
-    </main>
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2025 Dev Rohilla | All Rights Reserved</p>
-        </div>
-    </footer>
+            <label for="purpose">Purpose of Contact:</label>
+            <textarea id="purpose" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                $(".fade-in").each(function() {
+                    let position = $(this).offset().top;
+                    let winTop = $(window).scrollTop();
+                    if (position < winTop + $(window).height() - 100) {
+                        $(this).addClass("visible");
+                    }
+                });
+            });
+
+            $("#contact-form").submit(function(event) {
+                event.preventDefault();
+                alert("Message sent successfully!");
+            });
+        });
+    </script>
+
 </body>
 </html>
