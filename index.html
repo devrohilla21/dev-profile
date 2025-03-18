@@ -5,73 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> <!-- Added for animations -->
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <h1>Dev's Portfolio</h1>
+        <h1 class="fade-in">Dev's Portfolio</h1>
+        <p class="fade-in">AI/ML Enthusiast | Python Developer</p>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
-        <p>Hello! I'm Dev, an AIML enthusiast and Python developer.</p>
+        <p>Hi, I'm <b>Dev</b>, a passionate AI/ML student working on various projects. I love <b>coding</b>, <b>singing</b>, and exploring new technologies.</p>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <h2>Projects</h2>
-        <div class="project-box">Quiz Game in Python</div>
-        <div class="project-box">AI-Based Chatbot</div>
-        <div class="project-box">Machine Learning Prediction Model</div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>C++</li>
-            <li>OOPs</li>
-            <li>DSA</li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-box">
-            <h3>Get in Touch</h3>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-                
-                <label for="purpose">Purpose of Contact:</label>
-                <textarea id="purpose" rows="4" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-
-        <div class="social-links">
-            <h3>Connect with Me</h3>
-            <p>📧 Email: dev@example.com</p>
-            <p>📸 Instagram: <a href="https://instagram.com/dev21.py" target="_blank">@dev21.py</a></p>
-            <p>💻 GitHub: <a href="https://github.com/devrohilla21" target="_blank">@devrohilla21</a></p>
+        <div class="project-list">
+            <div class="project-card">Quiz Game in Python</div>
+            <div class="project-card">AI-Based Chatbot</div>
+            <div class="project-card">Machine Learning Prediction Model</div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <section id="contact" class="fade-in">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/devrohilla21" target="_blank">devrohilla21</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/dev21.py" target="_blank">dev21.py</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Dev Rohilla | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
