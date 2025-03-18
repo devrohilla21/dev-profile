@@ -1,29 +1,31 @@
-/* Smooth scroll behavior */
+/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Modern Gradient Background */
+/* Light theme colors */
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #141E30, #243B55);
-    color: white;
+    background: linear-gradient(to right, #f8f9fa, #e3f2fd); /* Light pastel gradient */
+    color: #333;
 }
 
-/* Header */
+/* Sticky header with smooth hiding on scroll */
 header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    position: sticky;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out;
 }
 h1 {
     margin: 0;
+    font-size: 24px;
 }
 nav ul {
     list-style: none;
@@ -34,60 +36,59 @@ nav ul li {
     margin: 0 15px;
 }
 nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 nav ul li a:hover {
-    color: #ff9800;
+    color: #007bff;
 }
 
-/* Sections */
+/* Sections with reduced spacing */
 section {
-    padding: 80px 20px;
+    padding: 60px 20px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Project Cards */
+/* Project Cards with soft glow */
 .project-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
 }
 .project-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    background: #ffffff;
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 152, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3); /* Soft blue glow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(255, 152, 0, 0.9);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
+    background: #e3f2fd; /* Light blue hover */
 }
 
 /* Contact Links */
 a {
-    color: #ff9800;
+    color: #007bff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 a:hover {
-    color: #00ffcc;
+    color: #0056b3;
 }
 
 /* Footer */
 footer {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     padding: 15px;
-    position: relative;
-    bottom: 0;
     width: 100%;
-    color: white;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Fade-in Animation */
