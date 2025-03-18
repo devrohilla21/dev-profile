@@ -1,24 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let sections = document.querySelectorAll("section");
-    let observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("fade-in-visible");
+    const sections = document.querySelectorAll(".fade-in");
+
+    function checkScroll() {
+        sections.forEach((section) => {
+            const sectionPosition = section.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight - 100;
+
+            if (sectionPosition < screenPosition) {
+                section.classList.add("visible");
+            } else {
+                section.classList.remove("visible"); // Keeps animation working on scroll up/down
             }
         });
-    }, { threshold: 0.1 });
+    }
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Run on load
 
-    // Smooth Scroll for Navigation
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+    // Contact form submission
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("Message sent successfully!");
     });
 });
