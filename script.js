@@ -1,21 +1,25 @@
-// Smooth Scroll Animation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+document.addEventListener("DOMContentLoaded", function () {
+    let sections = document.querySelectorAll("section");
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+            } else {
+                entry.target.classList.remove("fade-in");  // Keep animation active
+            }
         });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+        observer.observe(section);
     });
 });
 
-// Scroll Animation
-window.addEventListener('scroll', () => {
-    document.querySelectorAll('section').forEach((section) => {
-        let sectionPos = section.getBoundingClientRect().top;
-        let screenPos = window.innerHeight / 1.3;
-
-        if (sectionPos < screenPos) {
-            section.classList.add('fade-in');
-        }
-    });
-})
+// Scroll progress bar
+window.addEventListener("scroll", () => {
+    const scrollProgress = document.querySelector('.progress-bar');
+    const scrollTop = document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    scrollProgress.style.width = progress + "%";
+});
