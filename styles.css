@@ -15,7 +15,7 @@ body {
     padding: 20px;
 }
 
-/* Header */
+/* Header (Fixed & No More Moving Up) */
 header {
     background: #4a90e2;
     color: white;
@@ -31,7 +31,6 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 nav ul {
@@ -58,10 +57,19 @@ nav ul li a:hover {
 
 /* Sections */
 section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skills */
 .skills-list {
     display: flex;
     justify-content: center;
@@ -76,12 +84,12 @@ section {
     border-radius: 5px;
 }
 
-/* Project Cards */
-.project-list {
+/* Projects */
+.project-grid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
 }
 
 .project-card {
@@ -90,7 +98,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    width: 250px;
+    width: 300px;
     font-weight: bold;
 }
 
