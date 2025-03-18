@@ -1,40 +1,44 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f0f9ff; /* Soft blue */
-    transition: background 0.3s ease;
+    background-color: #f5f7fa;
+    color: #333;
 }
 
-/* Header (Sticky & Animated) */
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
 header {
-    background: #4a90e2; /* Soft blue */
+    background: #4a90e2;
     color: white;
-    padding: 15px;
+    padding: 15px 0;
     position: fixed;
     top: 0;
     width: 100%;
-    transition: top 0.3s ease-in-out;
+    z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hide header on scroll down */
-.hidden {
-    top: -100px;
-}
-
-h1 {
-    margin: 0;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 nav ul li {
@@ -49,18 +53,30 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff7f50; /* Coral */
+    color: #ff7f50;
 }
 
 /* Sections */
 section {
-    padding: 80px 20px; /* Adjusted spacing */
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    padding: 100px 20px;
+    text-align: center;
 }
 
-/* Project Section */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Project Cards */
 .project-list {
     display: flex;
     justify-content: center;
@@ -76,24 +92,12 @@ section {
     transition: transform 0.3s ease;
     width: 250px;
     font-weight: bold;
-    color: #333;
 }
 
 .project-card:hover {
     transform: scale(1.05);
-    background-color: #ff7f50; /* Coral */
+    background-color: #ff7f50;
     color: white;
-}
-
-/* Links */
-a {
-    color: #4a90e2;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #ff7f50;
 }
 
 /* Footer */
@@ -101,23 +105,5 @@ footer {
     background: #4a90e2;
     color: white;
     padding: 15px;
-    width: 100%;
-}
-
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    text-align: center;
 }
