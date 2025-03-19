@@ -1,28 +1,31 @@
-// Fade-in Animation for Sections and Project Cards
-document.addEventListener("DOMContentLoaded", function () { 
-    let sections = document.querySelectorAll("section");
+// Fade-in Animation for About Me and Contact Sections
+document.addEventListener("DOMContentLoaded", function () {
+    let aboutSection = document.querySelector("#about");
+    let contactSection = document.querySelector("#contact");
 
     let observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("fade-in");
-
-                // If the project list is in view, fade in each project card
-                if (entry.target.id === "projects") {
-                    let projectCards = document.querySelectorAll(".project-card");
-                    projectCards.forEach((card, index) => {
-                        setTimeout(() => {
-                            card.classList.add("fade-in");
-                        }, index * 200); // Staggered delay for each card
-                    });
-                }
+                entry.target.classList.add("fade-in"); // Add fade-in animation
+                entry.target.style.opacity = 1; // Make element visible
+                entry.target.style.transform = "translateY(0)"; // Move element to its original position
+            } else {
+                entry.target.classList.remove("fade-in"); // Remove fade-in animation
+                entry.target.style.opacity = 0; // Hide element
+                entry.target.style.transform = "translateY(20px)"; // Move element slightly down
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.2 }); // Trigger animation when 20% of the element is visible
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    // Observe About Me section
+    if (aboutSection) {
+        observer.observe(aboutSection);
+    }
+
+    // Observe Contact section
+    if (contactSection) {
+        observer.observe(contactSection);
+    }
 });
 
 // Scroll Progress Bar
