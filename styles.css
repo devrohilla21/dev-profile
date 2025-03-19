@@ -3,14 +3,18 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0; /* Light background color */
+    background-image: url('https://example.com/tech-background.png'); /* Background image with tech elements */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     transition: background 0.3s ease;
     scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 /* Header */
 header {
-    background: #222;
+    background: rgba(34, 34, 34, 0.8); /* Semi-transparent dark background */
     color: white;
     padding: 20px;
     position: sticky;
@@ -19,18 +23,22 @@ header {
     z-index: 100;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 h1 {
     margin: 0;
     font-size: 2rem;
 }
+
 nav ul {
     list-style: none;
     padding: 0;
 }
+
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
@@ -38,6 +46,7 @@ nav ul li a {
     font-size: 1rem;
     transition: color 0.3s;
 }
+
 nav ul li a:hover {
     color: #ff9800;
 }
@@ -48,8 +57,11 @@ section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px; /* Constrain section width */
+    margin: 0 auto; /* Center the sections */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Projects Section */
@@ -59,6 +71,7 @@ section {
     flex-wrap: wrap;
     gap: 15px;
 }
+
 .project-card {
     background: white;
     padding: 15px;
@@ -67,6 +80,7 @@ section {
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     min-width: 250px;
 }
+
 .project-card:hover {
     transform: scale(1.05);
     background-color: #ff9800;
@@ -80,13 +94,14 @@ a {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 a:hover {
     color: #222;
 }
 
 /* Footer */
 footer {
-    background: #222;
+    background: rgba(34, 34, 34, 0.8);
     color: white;
     padding: 10px;
     position: relative;
@@ -101,6 +116,7 @@ footer {
     transform: translateY(20px);
     animation: fadeInUp 1s ease-out forwards;
 }
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
