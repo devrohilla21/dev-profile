@@ -88,15 +88,15 @@ section {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease; /* Smooth hover effect */
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease; /* Smooth hover effect */
     min-width: 250px;
     text-align: center;
     transform: translateY(0); /* Initial position */
 }
 
 .project-card:hover {
-    transform: translateY(-10px); /* Move up by 10px on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: translateY(-20px); /* Move up by 20px on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
     background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque on hover */
 }
 
@@ -104,18 +104,18 @@ section {
     font-size: 2rem;
     margin-bottom: 10px;
     color: #ff9800;
-    transition: color 0.4s ease; /* Smooth icon color transition */
+    transition: color 0.5s ease; /* Smooth icon color transition */
 }
 
 .project-card h3 {
     margin: 10px 0;
-    transition: color 0.4s ease; /* Smooth text color transition */
+    transition: color 0.5s ease; /* Smooth text color transition */
 }
 
 .project-card p {
     font-size: 0.9rem;
     color: #666;
-    transition: color 0.4s ease; /* Smooth text color transition */
+    transition: color 0.5s ease; /* Smooth text color transition */
 }
 
 .project-card:hover i {
