@@ -1,4 +1,4 @@
-* General reset for the page */
+/* General reset for the page */
 html, body {
     margin: 0;
     padding: 0;
@@ -55,7 +55,7 @@ nav ul li a:hover {
     color: #ff9800;
 }
 
-/* Sections */
+/* Sections (About Me, Projects, Contact) */
 section {
     padding: 50px 20px;
     opacity: 0;
@@ -63,26 +63,13 @@ section {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     max-width: 900px; /* Constrain section width */
     margin: 0 auto; /* Center the sections */
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background-color: #e5ddd5; /* WhatsApp-like background color */
+    background-image: url('https://www.transparenttextures.com/patterns/tech-pattern.png'); /* Cute tech logos */
+    background-size: cover;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    background-image: url('https://www.transparenttextures.com/patterns/whatsapp.png'); /* WhatsApp-like background */
-    background-size: cover;
-    position: relative;
-}
-
-/* Add cute tech logos */
-section::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 50px;
-    height: 50px;
-    background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111628.png'); /* Example tech logo */
-    background-size: cover;
-    opacity: 0.6;
+    color: #000; /* Ensure text is readable */
 }
 
 /* Project Cards */
@@ -94,7 +81,7 @@ section::before {
 }
 
 .project-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
