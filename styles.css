@@ -88,30 +88,53 @@ section {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease; /* Smooth hover effect */
     min-width: 250px;
     text-align: center;
-    transition: background-color 0.3s, color 0.3s;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slight upward shift */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth fade-in */
+}
+
+.project-card.fade-in {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Move to original position */
 }
 
 .project-card i {
     font-size: 2rem;
     margin-bottom: 10px;
     color: #ff9800;
+    transition: color 0.4s ease; /* Smooth icon color transition */
 }
 
 .project-card h3 {
     margin: 10px 0;
+    transition: color 0.4s ease; /* Smooth text color transition */
 }
 
 .project-card p {
     font-size: 0.9rem;
     color: #666;
+    transition: color 0.4s ease; /* Smooth text color transition */
 }
 
 .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque on hover */
+}
+
+.project-card:hover i {
+    color: #ff5722; /* Change icon color on hover */
+}
+
+.project-card:hover h3 {
+    color: #ff5722; /* Change heading color on hover */
+}
+
+.project-card:hover p {
+    color: #444; /* Change paragraph color on hover */
 }
 
 /* Footer */
