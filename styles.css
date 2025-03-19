@@ -14,6 +14,7 @@ body {
     background-color: #f0f0f0;
     background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Subtle tech pattern */
     background-size: 200px 200px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Header */
@@ -26,6 +27,7 @@ header {
     width: 100%;
     z-index: 100;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
@@ -70,6 +72,7 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     color: #000; /* Ensure text is readable */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Project Cards */
@@ -88,6 +91,7 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 250px;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .project-card i {
@@ -116,6 +120,7 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .social-links a {
@@ -167,4 +172,55 @@ footer {
     .project-card {
         width: 100%;
     }
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+[data-theme="dark"] body {
+    background-color: #121212;
+    background-image: none; /* Remove the tech pattern in dark mode */
+}
+
+[data-theme="dark"] header {
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+[data-theme="dark"] section {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .project-card {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .project-card p {
+    color: #cccccc;
+}
+
+[data-theme="dark"] footer {
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+[data-theme="dark"] nav ul li a {
+    color: #ffffff;
+}
+
+[data-theme="dark"] nav ul li a:hover {
+    color: #ff9800;
+}
+
+[data-theme="dark"] .social-links a {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .social-links a:hover {
+    color: #ff9800;
 }
