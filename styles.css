@@ -182,7 +182,7 @@ footer {
 
 [data-theme="dark"] body {
     background-color: #121212;
-    background-image: none; /* Remove the tech pattern in dark mode */
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Re-add the tech pattern in dark mode */
 }
 
 [data-theme="dark"] header {
@@ -218,7 +218,7 @@ footer {
 }
 
 [data-theme="dark"] .social-links a {
-    color: #ffffff;
+    color: #ffffff; /* Ensure social links remain light in dark mode */
 }
 
 [data-theme="dark"] .social-links a:hover {
