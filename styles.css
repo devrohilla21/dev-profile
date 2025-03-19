@@ -91,14 +91,13 @@ section {
     transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease; /* Smooth hover effect */
     min-width: 250px;
     text-align: center;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(50px); /* Start 50px below */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth fade-in and upward movement */
+    transform: translateY(0); /* Initial position */
 }
 
-.project-card.fade-in {
-    opacity: 1; /* Visible */
-    transform: translateY(0); /* Move to original position */
+.project-card:hover {
+    transform: translateY(-10px); /* Move up by 10px on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque on hover */
 }
 
 .project-card i {
@@ -117,12 +116,6 @@ section {
     font-size: 0.9rem;
     color: #666;
     transition: color 0.4s ease; /* Smooth text color transition */
-}
-
-.project-card:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque on hover */
 }
 
 .project-card:hover i {
