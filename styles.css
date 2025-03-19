@@ -57,6 +57,19 @@ nav ul li a:hover {
     color: #ff9800;
 }
 
+/* Scroll Animation */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(20px); /* Initial position slightly below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation when section is in view */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+}
+
 /* Sections (About Me, Projects, Contact) */
 section {
     padding: 50px 20px;
@@ -73,23 +86,6 @@ section {
     margin-bottom: 20px;
     color: #000; /* Ensure text is readable */
     transition: background-color 0.3s, color 0.3s;
-}
-
-/* Scroll Up and Down Animation */
-@keyframes scrollUpDown {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px); /* Move up */
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.scroll-animate {
-    animation: scrollUpDown 1.5s ease-in-out infinite;
 }
 
 /* Project Cards */
@@ -166,35 +162,6 @@ footer {
     color: #ff9800;
 }
 
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Scroll Progress Bar */
-.progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 5px;
-    width: 0;
-    background-color: #ff9800;
-    z-index: 9999;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .project-list {
@@ -209,50 +176,21 @@ footer {
 /* Dark Mode Styles */
 [data-theme="dark"] {
     background-color: #121212;
-    color: #ffffff;
-}
-
-[data-theme="dark"] body {
-    background-color: #121212;
-    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Re-add the tech pattern in dark mode */
+    color: white;
 }
 
 [data-theme="dark"] header {
-    background: #1f1f1f;
-    color: #ffffff;
+    background-color: #333;
 }
 
 [data-theme="dark"] section {
-    background-color: #1f1f1f;
-    color: #ffffff;
-}
-
-[data-theme="dark"] .project-card {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-}
-
-[data-theme="dark"] .project-card p {
-    color: #cccccc;
+    background-color: #222;
 }
 
 [data-theme="dark"] footer {
-    background: #1f1f1f;
-    color: #ffffff;
+    background-color: #333;
 }
 
-[data-theme="dark"] nav ul li a {
-    color: #ffffff;
-}
-
-[data-theme="dark"] nav ul li a:hover {
-    color: #ff9800;
-}
-
-[data-theme="dark"] .social-links a {
-    color: #ffffff; /* Ensure social links remain light in dark mode */
-}
-
-[data-theme="dark"] .social-links a:hover {
-    color: #ff9800;
+[data-theme="dark"] .project-card {
+    background-color: #444;
 }
