@@ -1,11 +1,58 @@
-/* Body with WhatsApp-like background */
-body {
-    background-color: #e5ddd5; /* WhatsApp background color */
-    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Subtle tech pattern */
-    background-size: 200px 200px;
+/* General reset for the page */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: 'Arial', sans-serif;
     text-align: center;
     scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Body with tech-themed background */
+body {
+    background-color: #f0f0f0;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Subtle tech pattern */
+    background-size: 200px 200px;
+}
+
+/* Header */
+header {
+    background: #000; /* Black background */
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
 }
 
 /* Sections (About Me, Projects, Contact) */
@@ -16,8 +63,11 @@ section {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     max-width: 900px; /* Constrain section width */
     margin: 0 auto; /* Center the sections */
-    background-color: transparent; /* Remove white background */
+    background-color: #e5ddd5; /* WhatsApp-like background color */
+    background-image: url('https://www.transparenttextures.com/patterns/tech-pattern.png'); /* Cute tech logos */
+    background-size: cover;
     border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     color: #000; /* Ensure text is readable */
 }
@@ -34,7 +84,7 @@ section {
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 250px;
     text-align: center;
