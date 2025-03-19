@@ -1,8 +1,15 @@
+/* General reset for the page */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Body */
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    margin: 0;
-    padding: 0;
     background-color: #f0f0f0; /* Light background color */
     background-image: url('https://example.com/tech-background.png'); /* Background image with tech elements */
     background-size: cover;
@@ -64,7 +71,11 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Projects Section */
+/* Prevent content from causing horizontal scroll */
+* {
+    box-sizing: border-box;
+}
+
 .project-list {
     display: flex;
     justify-content: center;
