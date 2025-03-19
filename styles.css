@@ -87,8 +87,8 @@ section {
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for transform and shadow */
     min-width: 250px;
     text-align: center;
     transform: translateY(0); /* Initial position */
@@ -96,8 +96,7 @@ section {
 
 .project-card:hover {
     transform: translateY(-20px); /* Move up by 20px on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
 }
 
 .project-card i {
