@@ -1,18 +1,11 @@
 // Fade-in Animation for Sections and Project Cards
 document.addEventListener("DOMContentLoaded", function () { 
     let sections = document.querySelectorAll("section");
-    let scrollAnimElements = document.querySelectorAll(".scroll-animate");
 
-    // Apply the animation class to elements that need to animate on scroll
     let observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("fade-in");
-
-                // Add scroll animation to elements once they are in view
-                if (entry.target.classList.contains("scroll-animate")) {
-                    entry.target.classList.add("scroll-animate");
-                }
 
                 // If the project list is in view, fade in each project card
                 if (entry.target.id === "projects") {
