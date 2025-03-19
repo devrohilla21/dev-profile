@@ -1,4 +1,4 @@
-// Fade-in Animation for Sections
+// Fade-in Animation for Sections and Project Cards
 document.addEventListener("DOMContentLoaded", function () {
     let sections = document.querySelectorAll("section");
 
@@ -6,6 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("fade-in");
+
+                // If the project list is in view, fade in each project card
+                if (entry.target.id === "projects") {
+                    let projectCards = document.querySelectorAll(".project-card");
+                    projectCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add("fade-in");
+                        }, index * 200); // Staggered delay for each card
+                    });
+                }
             }
         });
     }, { threshold: 0.1 });
