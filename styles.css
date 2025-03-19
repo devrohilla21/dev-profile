@@ -1,168 +1,114 @@
-/* General reset for the page */
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
-/* Body */
-body {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    background-color: #f0f0f0; /* Light background color */
-    background-image: url('https://example.com/tech-background.png'); /* Background image with tech elements */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: background 0.3s ease;
-    scroll-behavior: smooth; /* Smooth scrolling */
+body.dark-mode header,
+body.dark-mode footer {
+    background: rgba(0, 0, 0, 0.8);
 }
 
-/* Header */
-header {
-    background: rgba(34, 34, 34, 0.8); /* Semi-transparent dark background */
-    color: white;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+body.dark-mode section {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ff9800;
-}
-
-/* Sections */
-section {
-    padding: 50px 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    max-width: 900px; /* Constrain section width */
-    margin: 0 auto; /* Center the sections */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Prevent content from causing horizontal scroll */
-* {
-    box-sizing: border-box;
-}
-
-.project-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
+/* Project Card Enhancements */
 .project-card {
     background: white;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     min-width: 250px;
+    text-align: center;
 }
 
-.project-card:hover {
-    transform: scale(1.05);
-    background-color: #ff9800;
-    color: white;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.project-card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff9800;
 }
 
-/* Contact Links */
-a {
+.project-card h3 {
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.project-card .project-link {
+    display: inline-block;
+    margin-top: 10px;
     color: #ff9800;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: bold;
 }
 
-a:hover {
-    color: #222;
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-/* Footer */
-footer {
-    background: rgba(34, 34, 34, 0.8);
-    color: white;
+#contact-form input,
+#contact-form textarea {
     padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Scroll Progress Bar */
-.progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 5px;
-    width: 100%;
+#contact-form button {
+    padding: 10px;
     background-color: #ff9800;
-    z-index: 9999;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
-/* Hover effects for links */
-a:hover {
-    color: #ff9800;
-    text-decoration: underline;
+#contact-form button:hover {
+    background-color: #e68900;
 }
 
-/* Mobile-specific Styles */
+/* Footer Enhancements */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links {
+    margin: 10px 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    body {
-        scroll-behavior: smooth; /* Ensure smooth scrolling on mobile */
+    .project-list {
+        flex-direction: column;
     }
 
-    section {
-        padding: 40px 15px; /* Adjust padding for mobile screens */
+    .project-card {
+        width: 100%;
     }
 }
