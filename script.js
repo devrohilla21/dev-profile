@@ -23,3 +23,19 @@ window.addEventListener("scroll", () => {
     const progress = (scrollTop / docHeight) * 100;
     scrollProgress.style.width = progress + "%";
 });
+
+// Theme Toggle Functionality
+const toggleButton = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
+
+// Set the initial theme
+if (currentTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+}
+
+// Toggle between dark and light mode
+toggleButton.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+});
