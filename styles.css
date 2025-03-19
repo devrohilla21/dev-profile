@@ -86,6 +86,7 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
+    perspective: 1000px; /* Add perspective for 3D effect */
 }
 
 .project-card {
@@ -96,13 +97,13 @@ section {
     transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for transform and shadow */
     min-width: 250px;
     text-align: center;
-    transform: translateY(0); /* Initial position */
+    transform: translateZ(0); /* Initial position */
     position: relative; /* Add relative positioning */
     z-index: 1; /* Default z-index */
 }
 
 .project-card:hover {
-    transform: translateY(-20px); /* Move up by 20px on hover */
+    transform: translateZ(50px); /* Move card towards the user */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
     z-index: 2; /* Bring hovered card to the top */
 }
