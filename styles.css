@@ -128,3 +128,14 @@ a:hover {
     color: #ff9800;
     text-decoration: underline;
 }
+
+/* Mobile-specific Styles */
+@media (max-width: 768px) {
+    body {
+        scroll-behavior: smooth; /* Ensure smooth scrolling on mobile */
+    }
+
+    section {
+        padding: 40px 15px; /* Adjust padding for mobile screens */
+    }
+}
